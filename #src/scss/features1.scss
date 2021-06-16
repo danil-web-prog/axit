@@ -1,0 +1,180 @@
+.features1 {
+  border-bottom: 1px solid #d6d6d6;
+  background: #f5f5f5;
+  width: 100%;
+
+  @include flex(center, center);
+  .container {
+    margin: 0 auto;
+    height: 100%;
+    @include flex(center, center);
+  }
+  &_box_one {
+    height: 100%;
+    @include flex(center, center);
+
+    .one,
+    .two,
+    .tree {
+      width: 120px;
+      height: 120px;
+      background: #333333;
+      border: 1px solid rgb(196, 190, 190);
+      font-size: 15px;
+      @include flex(center, center);
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Open Sans", sans-serif;
+      cursor: pointer;
+    }
+  }
+  &_box_two {
+    width: 90%;
+    height: 80%;
+    @include flex(center, center);
+    &_one,
+    &_two,
+    &_tree {
+      @include flex(center, center);
+      width: 100%;
+      height: 100%;
+      font-family: "Open Sans", sans-serif;
+      &_item {
+        font-size: 20px;
+        color: #000;
+        margin-bottom: 50px;
+      }
+      &_text {
+        color: #86878b;
+        font-size: 14px;
+        margin-bottom: 51px;
+      }
+
+      &_box2 {
+        width: 30%;
+        @include flex(center, center);
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .features1 {
+      height: 596px;
+    .container {
+      width: 1024px;
+    }
+    &_box_one {
+      margin: 0 100px 0 0;
+      width: 130px;
+      flex-direction: column;
+    }
+    &_box_two {
+      &_one,
+      &_two,
+      &_tree {
+        flex-direction: row;
+        &_text {
+          width: 476px;
+        }
+        &_box1 {
+          width: 70%;
+          @include flex(space-evenly, flex-start);
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .features1 {
+      height: 596px;
+    .container {
+      width: 80%;
+      flex-direction: column;
+    }
+    &_box_one {
+      width: 80%;
+      flex-direction: row;
+    }
+    &_box_two {
+      &_one,
+      &_two,
+      &_tree {
+        flex-direction: column;
+        &_text {
+          width: 476px;
+        }
+        &_box1 {
+          width: 100%;
+          @include flex(space-evenly, center);
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 450px) {
+  .features1 {
+        height: 630px;
+    .container {
+      width: 90%;
+      flex-direction: column;
+    }
+    &_box_one {
+      width: 80%;
+      flex-direction: row;
+    }
+    &_box_two {
+      &_one,
+      &_two,
+      &_tree {
+        flex-direction: column;
+        &_text {
+          width: 100%;
+        }
+        &_box1 {
+          width: 100%;
+          @include flex(space-evenly, center);
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 449px) {
+  .features1 {
+      height: 636px;
+    .container {
+      width: 100%;
+      flex-direction: column;
+    }
+    &_box_one {
+      width: 80%;
+      flex-direction: row;
+    }
+    &_box_two {
+      &_one,
+      &_two,
+      &_tree {
+        flex-direction: column;
+        &_item{
+              margin-top: 10px;
+        }
+        &_text {
+          width: 100%;
+        }
+        &_box1 {
+          width: 100%;
+          @include flex(space-evenly, center);
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

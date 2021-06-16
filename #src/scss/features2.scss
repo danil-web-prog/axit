@@ -1,0 +1,156 @@
+@import "mixin";
+.features2 {
+  background: #fff;
+  width: 100%;
+
+  @include flex(center, center);
+
+  &_box_one {
+    @include flex(center, center);
+
+    .img {
+      @include flex(center, center);
+
+      width: 90%;
+      background: url("https://images.wallpaperscraft.ru/image/gorod_vid_sverhu_doroga_156925_3840x2400.jpg")
+        0 0/100% no-repeat;
+      width: 80%;
+      box-shadow: 0 0 30px 3px #000;
+    }
+    .img_2{
+
+      @include flex(center, center);
+      width: 90%;
+      background: url("https://images.wallpaperscraft.ru/image/ulitsa_gorod_osen_131015_3840x2400.jpg")
+        0 0/100% no-repeat;
+       box-shadow: 0 0 30px 3px #000;
+       width: 80%;
+    }
+  }
+  &_box_two {
+    @include flex(center, flex-start);
+    flex-direction: column;
+    &_item {
+      font-size: 20px;
+      color: #212121;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 29px;
+    }
+    &_text {
+      margin-top: 30px;
+      color: #86878b;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 4px;
+    }
+    &_box1 {
+      @include flex(center, flex-start);
+      margin-top: 42px;
+      &_img {
+        @include flex(start, flex-start);
+        width: 20%;
+
+        height: 100%;
+      }
+      &_text {
+        margin-left: 30px;
+        width: 80%;
+        height: 100%;
+        font-family: "Open Sans", sans-serif;
+        &_item {
+          margin-bottom: 12px;
+          color: #212121;
+          font-size: 14px;
+        }
+        &_text {
+          color: #86878b;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .features2 {
+    height: 597px;
+    .container {
+      @include flex(center, center);
+      width: 1024px;
+      margin: 0 auto;
+      height: 100%;
+    }
+    &_box_one {
+      height: 100%;
+      width: 50%;
+      .img {
+        height: 40%;
+      }
+    }
+    &_box_two {
+      height: 100%;
+      width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .features2 {
+    height: 900px;
+    .container {
+      @include flex(center, center);
+      width: 80%;
+      margin: 0 auto;
+      height: 100%;
+      flex-direction: column;
+    }
+    &_box_one {
+      height: 50%;
+      width: 100%;
+      .img {
+        height: 60%;
+        background-size: cover;
+      }
+    }
+    &_box_two {
+      height: 50%;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 450px) {
+  .features2 {
+    height: 500px;
+    .container {
+      @include flex(center, center);
+      width: 90%;
+      margin: 0 auto;
+      height: 100%;
+      flex-direction: column;
+    }
+    &_box_one {
+      display: none;
+    }
+    &_box_two {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 449px) {
+  .features2 {
+    height: 800px;
+    .container {
+      @include flex(center, center);
+      width: 96%;
+      margin: 0 auto;
+      flex-direction: column;
+      height: 100%;
+    }
+    &_box_one {
+      display: none;
+    }
+    &_box_two {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "navbar";
+@import "header";
+@import "brand";
+@import "features1";
+@import "features2";
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+}
+.btn{
+  width: 121px;
+  height: 46px;
+  background: #FF8B38;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  @include flex(center, center);
+  border-radius: 2px;
+}
+.hr{
+  
+  hr{
+    height: 2px;
+    width: 64px;
+    border: none;
+    background: #FF8B38;
+  }
+}
+.wrapper {
+  width: 100%;
+}
+
+.navbar_box_text_two_text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 200px 0 0 0;
+  width: 100%;
+  height: 100%;
+  @include flex(center, center);
+  flex-direction: column;
+  z-index: 9;
+  background: rgba(40, 44, 52, 1);
+
+  a {
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.6901960784313725;
+    color: white;
+    font-size: 50px;
+    margin: 20px;
+    text-decoration: none;
+  }
+}
+
+.show {
+  display: none;
+}

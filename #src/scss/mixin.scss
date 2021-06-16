@@ -1,0 +1,5 @@
+@mixin flex($jus,$ali){
+  display: flex;
+  justify-content: $jus;
+  align-items: $ali;
+}

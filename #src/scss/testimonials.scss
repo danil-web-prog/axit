@@ -1,0 +1,127 @@
+.testimonials {
+  background: #fff;
+  width: 100%;
+  @include flex(center, center);
+  max-height: 100%;
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+    @include flex(center, center);
+    flex-direction: column;
+  }
+  &_box_one {
+    text-align: center;
+    @include flex(center, center);
+    flex-direction: column;
+    height: 250px;
+    max-height: 50%;
+    width: 100%;
+
+    &_item {
+      color: #212121;
+      font-size: 36px;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 30px;
+    }
+    &_text {
+      color: #86878b;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      margin-top: 30px;
+    }
+  }
+  &_box_two {
+    min-height: 50%;
+    width: 100%;
+    @include flex(space-evenly, center);
+    &_box {
+      @include flex(space-around, center);
+      flex-direction: column;
+    }
+    &_one {
+      background: url("../../img/8.png") 0 0/100% no-repeat;
+      height: 150px;
+      width: 100%;
+      @include flex(center, center);
+      .box_p {
+        width: 90%;
+        height: 50%;
+        @include flex(center, center);
+
+        color: #86878b;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        padding: 0 10px;
+      }
+    }
+    &_two {
+      margin-top: 30px;
+
+      height: 30%;
+      width: 100%;
+      &_logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        background: #9a9a9a;
+        @include flex(center, center);
+        img {
+          max-width: 80%;
+        }
+      }
+      &_text {
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        font-family: "Open Sans", sans-serif;
+        &_name {
+          color: #333333;
+          font-size: 20px;
+        }
+        &_text {
+          color: #86878b;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 700px) {
+  .testimonials {
+    height: 592px;
+    &_box_two {
+      &_two {
+        @include flex(space-between, center);
+      }
+      flex-direction: row;
+      &_box {
+        width: 25%;
+        height: 300px;
+      }
+    }
+  }
+  .testimonials_box_two_two_text {
+    @include flex(center, flex-start);
+  }
+}
+@media screen and (max-width: 700px) {
+  .testimonials {
+    height: 1300px;
+
+    .testimonials_box_two {
+      flex-direction: column;
+      &_two {
+        @include flex(center, center);
+      }
+      &_box {
+        width: 100%;
+        height: 300px;
+        border-top: 2px solid #212121;
+      }
+    }
+  }
+  .testimonials_box_two_two_text {
+    @include flex(center, center);
+  }
+}

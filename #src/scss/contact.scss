@@ -1,0 +1,122 @@
+.contact {
+  background: #fff;
+  width: 100%;
+  height: 613px;
+  max-height: 100%;
+  .container {
+    max-width: 1024px;
+    margin: auto;
+    height: 100%;
+    @include flex(center, center);
+    flex-direction: column;
+  }
+  &_box_one {
+    text-align: center;
+    @include flex(center, center);
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+    &_item {
+      color: #212121;
+      font-size: 36px;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 26px;
+    }
+    &_text {
+      opacity: 0.8;
+      color: #86878b;
+      font-family: "Raleway", sans-serif;
+
+      margin: 23px 0 33px 0;
+    }
+  }
+  &_box_two {
+    @include flex(center, center);
+
+    height: 30%;
+    width: 100%;
+    &_one {
+      height: 100%;
+      @include flex(space-evenly, center);
+      flex-direction: column;
+      label {
+        width: 80%;
+        height: 33.33333333333333%;
+        @include flex(center, flex-end);
+        input {
+          width: 100%;
+
+          font-family: "Open Sans", sans-serif;
+          border-bottom: 1px solid #bdbdbdd0;
+          font-size: 14px;
+          color: #bdbdbdd0;
+          &:focus {
+            border-bottom: 1px solid #000;
+            font-size: 14px;
+            color: #000;
+          }
+          &:hover {
+            border-bottom: 1px solid #000;
+            font-size: 14px;
+            color: #000;
+          }
+        }
+      }
+    }
+    &_two {
+      @include flex(center, center);
+      height: 100%;
+      label {
+        @include flex(center, center);
+        width: 100%;
+        height: 100%;
+
+        input {
+          height: 100%;
+          width: 80%;
+          font-family: "Open Sans", sans-serif;
+          border-bottom: 1px solid #bdbdbdd0;
+          font-size: 14px;
+          color: #bdbdbdd0;
+          &:focus {
+            border-bottom: 1px solid #000;
+            font-size: 14px;
+            color: #000;
+          }
+          &:hover {
+            border-bottom: 1px solid #000;
+            font-size: 14px;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  &_box_tree {
+    height: 30%;
+    width: 100%;
+    @include flex(center, center);
+  }
+}
+@media screen and (min-width: 500px) {
+  .contact_box_two {
+    &_one {
+      width: 50%;
+    }
+    &_two {
+      width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact_box_two {
+    height: 450px;
+    flex-direction: column;
+    &_one {
+      width: 100%;
+    }
+    &_two {
+      width: 100%;
+    }
+  }
+}

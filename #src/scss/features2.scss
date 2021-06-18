@@ -17,14 +17,13 @@
       width: 80%;
       box-shadow: 0 0 30px 3px #000;
     }
-    .img_2{
-
+    .img_2 {
       @include flex(center, center);
       width: 90%;
       background: url("https://images.wallpaperscraft.ru/image/ulitsa_gorod_osen_131015_3840x2400.jpg")
         0 0/100% no-repeat;
-       box-shadow: 0 0 30px 3px #000;
-       width: 80%;
+      box-shadow: 0 0 30px 3px #000;
+      width: 80%;
     }
   }
   &_box_two {

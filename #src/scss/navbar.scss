@@ -1,48 +1,54 @@
 @import "mixin";
-.navbar{
-  @include flex(center,center);
+.navbar {
+  @include flex(center, center);
   width: 100%;
   height: 71px;
   background: #000000;
-  .container{
+  .container {
     width: 1024px;
     margin: 0 auto;
     padding: 20px 0;
     height: 100%;
   }
-  &_box{
+  &_box {
     width: 100%;
-    @include flex(center,center);
+    @include flex(center, center);
     height: 100%;
-    &_image{
-      @include flex(start,center);
+    &_image {
+      @include flex(start, center);
       height: 100%;
       width: 55%;
-      img{
+      img {
         max-height: 100%;
       }
     }
-    &_text_one{
-      @include flex(space-between,center);
+    &_text_one {
+      @include flex(space-between, center);
       width: 45%;
       height: 100%;
-      a{
+      a {
         display: block;
         color: white;
         text-decoration: none;
         opacity: 0.6901960784313725;
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
+        transition: all 0.6s;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+          transition: all 0.6s;
+        }
       }
     }
-    &_text_two{
+    &_text_two {
       width: 45%;
       height: 100%;
-      &_div{
+      &_div {
         z-index: 10;
-        @include flex(space-evenly,center);
+        @include flex(space-evenly, center);
         flex-direction: column;
         width: 50%;
-        div{
+        div {
           background: white;
           height: 10px;
           width: 100px;
@@ -51,8 +57,8 @@
     }
   }
 }
-@media screen and (max-width: 1024px){
-  .navbar{
+@media screen and (max-width: 1024px) {
+  .navbar {
     height: 200px;
   }
 }

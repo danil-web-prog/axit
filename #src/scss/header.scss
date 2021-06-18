@@ -1,233 +1,237 @@
-input,textarea{
+input,
+textarea {
   border: none;
   outline: none;
 }
 @import "mixin";
-.header{
-  background: url("https://images.wallpaperscraft.ru/image/ulitsa_zakat_palmy_122106_3840x2400.jpg") 0 0/100% no-repeat;
+.header {
+  background: url("https://images.wallpaperscraft.ru/image/ulitsa_zakat_palmy_122106_3840x2400.jpg")
+    0 0/100% no-repeat;
   width: 100%;
 
-  @include flex(center,center);
-  .container{@include flex(center,center);}
-  &_box_one{
-  
-    @include flex(space-around,flex-start);
+  @include flex(center, center);
+  .container {
+    @include flex(center, center);
+  }
+  &_box_one {
+    @include flex(space-around, flex-start);
     flex-direction: column;
-  
-    &_logo{
+
+    &_logo {
       height: 60px;
-      img{
+      img {
         max-height: 100%;
         min-height: 100%;
-
       }
     }
-    &_item{
-      color: #FFFFFF;
-      font-size:36px;
-      font-family: 'Raleway', sans-serif;
+    &_item {
+      color: #ffffff;
+      font-size: 36px;
+      font-family: "Raleway", sans-serif;
     }
-    &_hr{
+    &_hr {
       width: 74px;
       height: 16px;
-      @include flex(center,center);
-      hr{
+      @include flex(center, center);
+      hr {
         border: none;
         width: 100%;
         height: 3px;
-        background: #FFFFFF;
+        background: #ffffff;
       }
     }
-    &_text{
+    &_text {
       opacity: 0.8;
-      color: #FFFFFF;
-      font-family: 'Raleway', sans-serif;
+      color: #ffffff;
+      font-family: "Raleway", sans-serif;
       text-shadow: 0 0 3px #000000;
     }
-    &_btn{
-
-      button{
+    &_btn {
+      button {
         width: 135px;
         height: 42px;
         border: 2px solid #ffffff;
-        @include flex(center,center);
+        @include flex(center, center);
         background: none;
-        color: #FFFFFF;
+        color: #ffffff;
         font-size: 15px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
+        transition: all 0.6s;
+        &:hover {
+          transform: scale(1.1);
+          background: #fff;
+          transition: all 0.6s;
+          color: #000;
+          box-shadow: 0 0 3px #000;
+        }
       }
     }
   }
-  &_box_two{
-    @include flex(center,center);
+  &_box_two {
+    @include flex(center, center);
     flex-direction: column;
 
-  
-    &_box{
-      @include flex(center,center);
+    &_box {
+      @include flex(center, center);
       flex-direction: column;
-    
-      &_one{
-        @include flex(center,center);
+
+      &_one {
+        @include flex(center, center);
         height: 14.67391304347826%;
         width: 100%;
-        background: #F5F5F5;
+        background: #f5f5f5;
         color: #333333;
         font-size: 20px;
-        font-family: 'Open Sans', sans-serif;
-        span{
+        font-family: "Open Sans", sans-serif;
+        span {
           margin: 0 5px;
-          color: #FF8B38;
-          
+          color: #ff8b38;
         }
       }
-      &_two{
-        @include flex(center,center);
+      &_two {
+        @include flex(center, center);
         height: 72.55434782608696%;
         width: 100%;
         flex-direction: column;
-        background: #FFFFFF;
-        label{
+        background: #ffffff;
+        label {
           width: 100%;
           height: 33.33333333333333%;
-          @include flex(center,center);
-          input{
-            font-family: 'Open Sans', sans-serif;
-            border-bottom:1px solid #bdbdbdd0; 
+          @include flex(center, center);
+          input {
+            font-family: "Open Sans", sans-serif;
+            border-bottom: 1px solid #bdbdbdd0;
             font-size: 14px;
             color: #bdbdbdd0;
-            &:focus{
+            &:focus {
               transform: scale(1.1);
-              border-bottom:1px solid #000; 
+              border-bottom: 1px solid #000;
               font-size: 14px;
               color: #000;
             }
-            &:hover{
+            &:hover {
               transform: scale(1.1);
-              border-bottom:1px solid #000; 
+              border-bottom: 1px solid #000;
               font-size: 14px;
               color: #000;
-        }
             }
           }
-          
+        }
       }
-      &_tree{
-        @include flex(center,center);
+      &_tree {
+        @include flex(center, center);
         height: 14.67391304347826%;
         width: 100%;
         font-size: 15px;
-        color: #FFFFFF;
-        font-family: 'Open Sans', sans-serif;
-        background: #FF9B51;
+        color: #ffffff;
+        font-family: "Open Sans", sans-serif;
+        background: #ff9b51;
         cursor: pointer;
-        &:hover{
+        &:hover {
           transform: scale(1.01);
         }
       }
     }
   }
 }
-@media screen and (min-width:1024px){
-  .header{
+@media screen and (min-width: 1024px) {
+  .header {
     height: 641px;
   }
-  .container{
+  .container {
     width: 1024px;
     margin: auto;
     padding: 20px 0;
     height: 100%;
   }
-  .header_box_one{
+  .header_box_one {
     width: 50%;
     height: 80%;
   }
-  .header_box_two{
+  .header_box_two {
     width: 50%;
     height: 80%;
-    &_box{
+    &_box {
       height: 80%;
       width: 80%;
     }
   }
 }
-@media screen and (max-width:1024px) and (min-width:768px){
-  .header{
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .header {
     height: 700px;
     background-size: cover;
-    .header_box_one{
-    width: 50%;
-    height: 100%;
-  }
-  .header_box_two{
-    height: 100%;
-    width: 50%;
-    &_box{
-      height: 80%;
-      width: 80%;
+    .header_box_one {
+      width: 50%;
+      height: 100%;
+    }
+    .header_box_two {
+      height: 100%;
+      width: 50%;
+      &_box {
+        height: 80%;
+        width: 80%;
+      }
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
     }
   }
-  .container{
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-  }
-  }
-
 }
-@media screen and (max-width:768px) and (min-width:400px){
-  .header{
+@media screen and (max-width: 768px) and (min-width: 400px) {
+  .header {
     height: 1000px;
     width: 100%;
     background-size: cover;
-    .container{
+    .container {
       width: 100%;
       height: 100%;
       flex-direction: column;
       padding: 10px;
     }
-    &_box_one{
-        width: 100%;
-        height: 49%;
-      }
-    &_box_two{
+    &_box_one {
+      width: 100%;
+      height: 49%;
+    }
+    &_box_two {
       height: 50%;
       width: 80%;
-        &_box{
-          height: 100%;
-          width: 100%;
-
-        }
+      &_box {
+        height: 100%;
+        width: 100%;
       }
+    }
   }
 }
-@media screen and (max-width:400px){
-  .header{
+@media screen and (max-width: 400px) {
+  .header {
     height: 1000px;
     width: 100%;
     background-size: cover;
-    .container{
+    .container {
       width: 100%;
       height: 100%;
       flex-direction: column;
       padding: 10px;
     }
-    &_box_one{
-        width: 100%;
-        height: 50%;
-      }
-    &_box_two{
+    &_box_one {
+      width: 100%;
+      height: 50%;
+    }
+    &_box_two {
       height: 50%;
       width: 95%;
-        &_box{
-          height: 100%;
-          width: 100%;
-          &_two{
-            input{
-              color: #000;
-            }
+      &_box {
+        height: 100%;
+        width: 100%;
+        &_two {
+          input {
+            color: #000;
           }
         }
       }
+    }
   }
 }
